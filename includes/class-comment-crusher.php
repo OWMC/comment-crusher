@@ -6,8 +6,6 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * Public has been commented out as not required for this particular plugin.
- *
  * @link       owmc.co.uk
  * @since      1.0.0
  *
@@ -80,7 +78,6 @@ class Comment_Crusher {
 		$this->load_dependencies();
 		$this->set_locale();
 		$this->define_admin_hooks();
-		// $this->define_public_hooks();  Commented out as not needed for this plugin.
 
 	}
 
@@ -157,9 +154,6 @@ class Comment_Crusher {
 
 		$plugin_admin = new Comment_Crusher_Admin( $this->get_plugin_name(), $this->get_version() );
 
-		// $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		// $this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-
 		// AND HERE IS WHERE I PUT MY OWN HOOKS... FINALLY.
 		// Remove admin menu
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'disable_admin_menu');
@@ -178,22 +172,6 @@ class Comment_Crusher {
 		$this->loader->add_action( 'wp_before_admin_bar_render', $plugin_admin, 'mytheme_admin_bar_render' );
 
 	}
-
-	/**
-	 * Register all of the hooks related to the public-facing functionality
-	 * of the plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 */
-	// private function define_public_hooks() {
-
-	// 	$plugin_public = new Comment_Crusher_Public( $this->get_plugin_name(), $this->get_version() );
-
-	// 	$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-	// 	$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
-
-	// }
 
 	/**
 	 * Run the loader to execute all of the hooks with WordPress.
