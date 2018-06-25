@@ -14,7 +14,6 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Comment Crusher
- * Plugin URI:        owmc.co.uk
  * Description:       Disable and remove comments on your WP site.
  * Version:           1.0.0
  * Author:            Oliver Wieland
