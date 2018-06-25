@@ -1,29 +1,38 @@
-=== Plugin Name ===
-Contributors: (this should be a list of wordpress.org userid's)
+=== Comment Crusher ===
+
+Contributors: olly-owmc
 Donate link: owmc.co.uk
 Tags: comments, spam
 Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 4.3
+Tested up to: 4.9.6
+Requires PHP: 5.2.4
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+Disable and remove comments on your WP site.
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+Many people use WP as a fully fledged CMS, building sites which don't even have a blog. In such cases, the WP comments functionality is a waste of pixels and needs completely removing. Comment Crusher was made to quickly and thoroughly clear your install of every trace of comment functionality.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+For many years I have used this collection of hooks to achieve this end. So came the idea to put it in a plugin and make it available to the masses. Simply activate this plugin and never worry about comments again.
 
-A few notes about the sections above:
+When activated, even though all pre-existing comments on your site won't be visible, they do still exist in your database. This plugin doesn't delete them. And so deactivating the plugin will restore full comments functionality and reveal all previous comments again. 
 
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
+This plugin does not collect any data, neither does it modify your database.
+
+*   Disable comment and trackback support from all post-types
+*   Deactivate comments and pings on the front end
+*   Hide all existing comments
+*   Remove the comment metabox from the dashboard
+*   Remove comments link from the toolbar
+*   Remove the admin menu link for comments
+*   Redirect anyone trying to access the comments admin page 
+
+This plugin was built using the [WP Plugin Boilerplate](https://wppb.me) and the custom functionality code I think goes back to [Matt Clements in 2013](https://gist.github.com/mattclements/10a997775894c7a0eba1).
+
+
 *   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
 stable.
 
@@ -39,76 +48,10 @@ you put the stable version, in order to eliminate any doubt.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
 1. Upload `comment-crusher.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
-
-== Frequently Asked Questions ==
-
-= A question that someone might have =
-
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
-
-== Screenshots ==
-
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
 
 = 1.0 =
-* A change since the previous version.
-* Another change.
-
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
-
-== Upgrade Notice ==
-
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
-
-== A brief Markdown Example ==
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Here's a link to [WordPress](http://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: http://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`
+* All systems are go.

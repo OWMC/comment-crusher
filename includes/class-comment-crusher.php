@@ -6,6 +6,8 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
+ * Public has been commented out as not required for this particular plugin.
+ *
  * @link       owmc.co.uk
  * @since      1.0.0
  *

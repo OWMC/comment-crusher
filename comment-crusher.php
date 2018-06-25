@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Comment Crusher
  * Plugin URI:        owmc.co.uk
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Disable and remove comments on your WP site.
  * Version:           1.0.0
  * Author:            Oliver Wieland
  * Author URI:        owmc.co.uk
@@ -24,6 +24,23 @@
  * Text Domain:       comment-crusher
  * Domain Path:       /languages
  */
+
+/*
+Comment Crusher is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+any later version.
+ 
+Comment Crusher is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+ 
+You should have received a copy of the GNU General Public License
+along with Comment Crusher. If not, see {URI to Plugin License}.
+*/
+
+
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
