@@ -68,8 +68,8 @@ class Comment_Crusher {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'PLUGIN_NAME_VERSION' ) ) {
-			$this->version = PLUGIN_NAME_VERSION;
+		if ( defined( 'COMMENT_CRUSHER_VERSION' ) ) {
+			$this->version = COMMENT_CRUSHER_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
@@ -156,20 +156,20 @@ class Comment_Crusher {
 
 		// AND HERE IS WHERE I PUT MY OWN HOOKS... FINALLY.
 		// Remove admin menu
-		$this->loader->add_action( 'admin_menu', $plugin_admin, 'disable_admin_menu');
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'comment_crusher_disable_admin_menu');
 		// Disable support for comments and trackbacks in post types
-		$this->loader->add_action( 'admin_init', $plugin_admin, 'df_disable_comments_post_types_support');
+		$this->loader->add_action( 'admin_init', $plugin_admin, 'comment_crusher_disable_comments_post_types_support');
 		// Close comments on the front-end
-		$this->loader->add_filter('comments_open', $plugin_admin, 'df_disable_comments_status');
-		$this->loader->add_filter('pings_open', $plugin_admin, 'df_disable_comments_status');
+		$this->loader->add_filter('comments_open', $plugin_admin, 'comment_crusher_disable_comments_status');
+		$this->loader->add_filter('pings_open', $plugin_admin, 'comment_crusher_disable_comments_status');
 		// Hide existing comments
-		$this->loader->add_filter('comments_array', $plugin_admin, 'df_disable_comments_hide_existing_comments' ) ;
+		$this->loader->add_filter('comments_array', $plugin_admin, 'comment_crusher_disable_comments_hide_existing_comments' ) ;
 		// Redirect any user trying to access comments page
-		$this->loader->add_action('admin_init', $plugin_admin, 'df_disable_comments_admin_menu_redirect');
+		$this->loader->add_action('admin_init', $plugin_admin, 'comment_crusher_disable_comments_admin_menu_redirect');
 		// Remove comments metabox from dashboard
-		$this->loader->add_action('admin_init', $plugin_admin, 'df_disable_comments_dashboard');
+		$this->loader->add_action('admin_init', $plugin_admin, 'comment_crusher_disable_comments_dashboard');
 		// Removes Comments from toolbar
-		$this->loader->add_action( 'wp_before_admin_bar_render', $plugin_admin, 'mytheme_admin_bar_render' );
+		$this->loader->add_action( 'wp_before_admin_bar_render', $plugin_admin, 'comment_crusher_admin_bar_render' );
 
 	}
 
