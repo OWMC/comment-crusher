@@ -1,7 +1,7 @@
 === Comment Crusher ===
 
 Contributors: olly-owmc
-Donate link: owmc.co.uk
+Donate link: https://owmc.co.uk/comment-crusher-available-from-the-wp-plugin-directory/
 Tags: comments, spam
 Requires at least: 3.0.1
 Tested up to: 4.9.6
