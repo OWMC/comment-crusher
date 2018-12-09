@@ -4,7 +4,7 @@ Contributors: olly-owmc
 Donate link: https://owmc.co.uk/comment-crusher-available-from-the-wp-plugin-directory/
 Tags: comments, spam
 Requires at least: 3.0.1
-Tested up to: 4.9.6
+Tested up to: 5.0
 Requires PHP: 5.2.4
 Stable tag: trunk
 License: GPLv2 or later
